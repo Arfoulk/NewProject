@@ -16,6 +16,7 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
+$(document).ready(function(){
 
 const cards = document.querySelectorAll('.memory-card');
 
@@ -23,6 +24,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+let openedCards = [];
 
 function flipCard() {
 	if (lockBoard) return;
@@ -41,7 +43,7 @@ function flipCard() {
 	}
 
 	function checkForMatch(){
-		let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+		let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 		isMatch ? disableCards() : unFlipCards();
 
 	}
@@ -68,10 +70,16 @@ function resetBoard() {
 
 function shuffle() {
 	cards.forEach(card => {
-		let ramdomPos = Math.floor(Math.random() * 12);
-		card.style.order = ramdomPos;
+		let randomPos = Math.floor(Math.random() * 12);
+		card.style.order = randomPos;
 	});
-}();
+};
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+
+
+
+
+});
