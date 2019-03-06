@@ -18,7 +18,7 @@
 //= require jquery_ujs
 $(document).ready(function(){
 
-const cards = document.querySelectorAll('.memory-card');
+cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
 let lockBoard = false;
