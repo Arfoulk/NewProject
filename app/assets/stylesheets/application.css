@@ -38,7 +38,7 @@
 body {
 	height: 100vh;
 	display: flex;
-	background: #060AB2;
+	background: #FF1493;
 
 }
 
@@ -81,7 +81,7 @@ transition: transform .2s;
 	padding: 20px;
 	position: absolute;
 	border-radius: 5px;
-	background: #1C7CCC;
+	background: #9932CC;
 	backface-visibility: hidden;
 	
 }

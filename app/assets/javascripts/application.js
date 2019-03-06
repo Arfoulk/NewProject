@@ -44,6 +44,10 @@ function flipCard() {
 
 	function checkForMatch(){
 		let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+		console.log("===");
+		console.log(isMatch);
+		console.log(firstCard.dataset.framework);
+		console.log(secondCard.dataset.framework);
 		isMatch ? disableCards() : unFlipCards();
 
 	}
@@ -68,12 +72,18 @@ function resetBoard() {
 	[firstCard, secondCard] = [null, null];
 }
 
-function shuffle() {
+(function shuffle() {
 	cards.forEach(card => {
 		let randomPos = Math.floor(Math.random() * 12);
 		card.style.order = randomPos;
 	});
-};
+	var second = 0, minute = 0;
+var timer = document.querySelector(".timer");
+var interval;
+})();
+
+
+
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
