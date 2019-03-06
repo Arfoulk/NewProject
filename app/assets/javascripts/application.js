@@ -20,11 +20,11 @@ $(document).ready(function(){
 
 cards = document.querySelectorAll('.memory-card');
 
-let hasFlippedCard = false;
-let lockBoard = false;
-let firstCard, secondCard;
+var hasFlippedCard = false;
+var lockBoard = false;
+var firstCard, secondCard;
 
-let openedCards = [];
+var openedCards = [];
 
 function flipCard() {
 	if (lockBoard) return;
@@ -43,7 +43,7 @@ function flipCard() {
 	}
 
 	function checkForMatch(){
-		let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+		var isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 		console.log("===");
 		console.log(isMatch);
 		console.log(firstCard.dataset.framework);
@@ -74,7 +74,7 @@ function resetBoard() {
 
 (function shuffle() {
 	cards.forEach(card => {
-		let randomPos = Math.floor(Math.random() * 12);
+		var randomPos = Math.floor(Math.random() * 12);
 		card.style.order = randomPos;
 	});
 	var second = 0, minute = 0;
